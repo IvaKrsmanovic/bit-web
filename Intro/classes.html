@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 300px;
+}
+
+.right {
+    overflow: hidden;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>Classes</h2>
+
+<div class="row">
+  <div class="column left">
+    <h2>Prva kolona</h2>
+    <p>
+        <img src="https://cdn.pixabay.com/photo/2017/03/19/20/19/ball-2157465__340.png" alt="logo" height="200px">
+        <ul>
+            <li>
+                link
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>  
+    </p>
+  </div>
+  <div class="column right" >
+    <h2>Druga kolona</h2>
+    <p><div>
+        <h1>HOTD SPOILER!</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tufpDC7PN3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+<div>
+    <video width="400" controls src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+      </video>       
+    </div></p>
+  </div>
+</div>
+</body>
+</html>

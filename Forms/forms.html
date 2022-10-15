@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="">
+        <p>Username:
+            <input type="text" name="username" id="">
+        </p>
+        <p>Password:
+            <input type="password" name="password" id="">
+        </p>
+        <p>
+            <button>
+                <a href="../Forms/Vrati.html">Forgotten password</a>
+            </button>
+        </p>
+        <input type="reset" value="Reset">
+    </form>
+    <form action="">
+        <p>Izaberite tacan odgovor
+            <br>
+            <input type="radio" name="prvo" value="a" checked="checked"> A
+            <input type="radio" name="prvo" value="b"> B
+            <input type="radio" name="prvo" value="c"> C
+        </p>
+        <p> Izaberite sve tacne odgovore
+            <input type="checkbox" name="drugo" value="a" checked="checked"> A
+            <input type="checkbox" name="drugo" value="b"> B
+            <input type="checkbox" name="drugo" value="c"> C
+        </p>
+        <p>
+            Esejsko
+            <textarea name="esej" id="" cols="30" rows="10" placeholder="Odgovor" required></textarea>        
+        </p>
+        <input type="submit" value="Predaj">
+    </form>
+    <form action="">
+        <p>
+            <input type="date" name="Datum rodjenja" id=""> Datum rodjenja
+            <label for="day">Dan:</label>
+            <input type="number" id="day" min="1" max="31"/>
+            <label for="month">Mesec:</label>
+            <input type="number" id="month" min="1" max="12" />
+            <label for="year">Godina:</label>
+            <input type="number" id="year" min="1900" max="2022" />
+        </p>
+    </form>
+    <form action="../Forms/handle-upload.html" method="get">
+        <p>Slika pre</p>
+        <input type="file" name="Slika pre" id="">
+        <textarea name="kom1" id="" cols="30" rows="10" placeholder="Opis slike pre"></textarea>
+        <p>Slika posle</p>
+        <input type="file" name="slika posle" id="">
+        <textarea name="kom2" id="" cols="30" rows="10" placeholder="Opis slike posle"></textarea>   
+    <input type="submit" value="Posalji">
+</form>
+</body>
+</html>
