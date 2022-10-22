@@ -1,0 +1,79 @@
+body {
+    margin: 20px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #e3f2fd;
+}
+
+.first {
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
+    text-align: left;
+    color: rgba(0, 206, 209, 0.6);
+}
+
+.second {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 200%;
+    text-align: right;
+    background-color: black;
+    color: #ffffff;
+}
+
+p span {
+    font-family:'Courier New', Courier, monospace;
+    text-decoration: overline;
+}
+
+#navod {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: Fasthand-Regular;
+    src: url(../Fasthand-Regular.ttf);
+}
+
+div {
+    font-family:Fasthand-Regular ;
+    text-align: center;
+}
+
+div p {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: lowercase;
+    text-decoration: line-through;
+}
+
+#precrt {
+    text-transform: uppercase;
+    text-decoration: wavy;
+}
+
+a:link {
+    color: red;
+}
+a:visited {
+    color:black ;
+}
+a:hover {
+    color: green;
+}
+
+a:active {
+    color: blue;
+}
+
+table {
+    outline: auto;
+}
+
+table tr td:nth-child(1) {
+    background-color: aliceblue;
+}
+
+table tr td:nth-child(2) {
+    background-color: hotpink;
+}
