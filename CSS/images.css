@@ -1,0 +1,17 @@
+p:first-child>img {
+    width: 200px;
+    float: right;
+}
+
+p:nth-child(2)>img {
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+p:last-child>img {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+

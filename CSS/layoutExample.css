@@ -1,0 +1,28 @@
+ul li{
+    list-style: none;
+    display: inline;
+    padding: 20px;
+}
+
+div {
+    width: 100%;
+    background-color: crimson;
+    text-align: right;
+    color: white;
+    float: right;
+}
+
+div img {
+    width: 100%;
+}
+
+#css {
+    width: 30%;
+    background-color: #35a9dc;   
+}
+
+#html {
+    width: 50%;
+    float: left;
+    background-color: #f16529;
+}
