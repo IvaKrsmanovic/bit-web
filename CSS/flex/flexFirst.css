@@ -1,0 +1,39 @@
+.flex-container {
+    margin: 10px;
+    display: flex;
+    color: white;
+}
+
+.first-column {
+    flex: 1;
+    flex-direction: column-reverse; 
+    order: 2;
+}
+
+.second-column {
+    flex: 2;
+    flex-direction: column;
+    order: 1;
+}
+
+.first {
+    background-color: rgb(252,221,158);
+    padding: 10px;
+}
+
+.second {
+    background-color: rgb(250,171,140);
+    padding: 10px;
+}
+
+.third {
+    background-color: rgb(72,70,75);
+    padding: 10px;
+}
+
+.fourth {
+    background-color: rgb(198,152,151);
+    padding: 10px;
+    align-items: stretch;
+}
+
