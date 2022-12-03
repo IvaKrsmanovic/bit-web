@@ -1,0 +1,25 @@
+$primarycolor: aliceblue;
+
+body {
+    background-color: $primarycolor;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+        color: brown;
+    }
+}
+
+div img {
+    width: 100%;
+} 
+@for $i from 1 through 8 {
+table:nth-child(#{$i}) {
+    padding: 0px + 5*$i;
+}
+}
