@@ -1,3 +1,9 @@
+// Doslovno sam samo nestovala mobile version i nije izgledalo kako treba, pa sam prekopirala identično
+// kako je u css-u starom i opet je iz scss u css otišlo skroz drugačije
+// Ne znam, ne razumem
+
+@import '_partial';
+
 @font-face {
     font-family: Roboto-Bold;
     src: url(./fonts/Roboto-Bold.ttf);
@@ -25,15 +31,15 @@
     font-family: Roboto-Bold;
 }
 
+$smallFontSize: 2vw;
 
 .background {
     background-image: url(./images/banner3.jpg);
     background-size: cover;
-
+    margin: 1%;
     .tablet {
         display: flex;
         width: 100%;
-
         header {
             flex: 50%;
             align-self: flex-start;
@@ -64,7 +70,7 @@
                 text-decoration: none;
                 color: rgb(236, 236, 238);
                 font-family: Roboto-Medium;
-                font-size: 2vw;
+                font-size: $smallFontSize;
             }
         }
     }
@@ -90,7 +96,7 @@
                 text-decoration: none;
                 color: rgb(236, 236, 238);
                 font-family: Roboto-Thin;
-                font-size: 2vw;
+                font-size: $smallFontSize;
                 padding: 1% 3% 1% 3%;
                 background-color: rgb(20, 110, 180);
                 border-radius: 30px;
@@ -103,9 +109,9 @@
 .container-main {
     @include format();
     flex-direction: column;
-
     #about {
         @include titles();
+        font-size: 3vw;
     }
 
     .border {
@@ -137,8 +143,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 1%;
 
     .container-sub {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex: 40%;
+        }
         flex: 30%;
         display: flex;
         justify-content: left;
@@ -146,7 +156,11 @@
         flex-direction: column;
 
         .subtitle {
-            font-size: 2vw;
+            font-size: $smallFontSize;
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
+                padding: 5px;
+                font-size: 3vw;
+            }
             padding: 3%;
             font-family: Roboto-Bold;
             color: rgb(94, 181, 231);
@@ -154,6 +168,10 @@
 
         div {
             .text {
+                @media screen and (min-width: 768px) and (max-width: 1199px) {
+                    font-size: 2.5vw;
+                    margin: 10px;
+                }
                 font-size: 1.8vw;
                 margin: 3%;
                 color: rgb(88, 80, 80);
@@ -161,6 +179,10 @@
 
             #services {
                 font-size: 1.8vw;
+                @media screen and (min-width: 768px) and (max-width: 1199px) {
+                    padding: 5px;
+                    font-size: 2.2vw;
+                }
                 padding: 3%;
                 color: rgb(120, 121, 119);
             }
@@ -169,6 +191,9 @@
 
     .img {
         flex: 30%;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex: 40%;
+        }
         margin: 1%;
 
         img {
@@ -179,31 +204,41 @@
 
 #testimonials {
     @include titles();
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 3vw;
+    }
 }
 
 .row {
     .blue {
         flex: 31%;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex: 45%;
+        }
         display: flex;
         flex-direction: column;
         background-color: rgb(127, 194, 247);
         margin: 1%;
         flex-grow: 0 !important;
+
         .testimonial {
             display: flex;
             padding: 5% 3% 3% 6%;
             font-family: Roboto-Black;
+
             .first {
                 flex: 1;
                 display: flex;
                 width: 50%;
                 padding-right: 4%;
+
                 #pic {
                     border-radius: 50%;
                     border: 5px solid white;
                     max-width: 100%;
                 }
             }
+
             .tst {
                 display: flex;
                 flex: 4;
@@ -211,13 +246,15 @@
                 align-items: left;
                 justify-content: center;
                 padding-left: 5%;
+
                 #name {
-                    font-size: 2vw;
+                    font-size: $smallFontSize;
                     font-family: Roboto-Bold;
                     color: black !important;
                 }
             }
         }
+
         #lorem {
             font-size: 1.8vw;
             color: white;
@@ -230,29 +267,80 @@
     @include format();
     flex-wrap: wrap;
     font-family: Roboto-Black;
-    margin: 2% 0% 2% 0%;
-}
+    margin: 1%;
 
-.contact {
-    display: flex;
-    flex-direction: column;
-    flex: 25%;
-    background-color: rgb(44, 221, 152);
-    color: white;
-    text-align: center;
-    height: 170px;
-    justify-content: center;
-}
+    .contact {
+        display: flex;
+        flex-direction: column;
+        flex: 25%;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex: 50%;
+        }
+        background-color: rgb(44, 221, 152);
+        color: white;
+        text-align: center;
+        height: 170px;
+        justify-content: center;
+    }
 
-.connect {
-    display: flex;
-    flex-direction: column;
-    flex: 25%;
-    background-color: rgb(255, 79, 129);
-    color: white;
-    text-align: center;
-    height: 170px;
-    justify-content: center;
+    .connect {
+        display: flex;
+        flex-direction: column;
+        flex: 25%;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex: 50%;
+        }
+        background-color: rgb(255, 79, 129);
+        color: white;
+        text-align: center;
+        height: 170px;
+        justify-content: center;
+    }
+
+    .address {
+        display: flex;
+        flex-direction: column;
+        flex: 25%;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex: 50%;
+        }
+        background-color: rgb(51, 105, 230);
+        color: white;
+        text-align: center;
+        height: 170px;
+        justify-content: center;
+    }
+
+    .house {
+        display: flex;
+        flex: 25%;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex: 50%;
+        }
+        background-color: rgb(127, 194, 247);
+        color: white;
+        text-align: center;
+        height: 170px;
+
+        #house {
+            width: 100%;
+        }
+    }
+
+    .map {
+        flex: 100%;
+        height: 340px;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            height: auto;
+        }
+
+        #map {
+            width: 100%;
+            height: 340px;
+        }
+    }
+
+
 }
 
 #subdiv {
@@ -261,87 +349,62 @@
     margin: 2%;
 }
 
-
 #subdiv2 {
     margin-top: 5%;
     margin-bottom: 2%;
 }
 
-
-.address {
-    display: flex;
-    flex-direction: column;
-    flex: 25%;
-    background-color: rgb(51, 105, 230);
-    color: white;
-    text-align: center;
-    height: 170px;
-    justify-content: center;
-}
-
-.house {
-    display: flex;
-    flex: 25%;
-    background-color: rgb(127, 194, 247);
-    color: white;
-    text-align: center;
-    height: 170px;
-}
-
-#house {
-    width: 100%;
-}
-
-.map {
-    flex: 100%;
-    height: 340px;
-}
-
-#map {
-    width: 100%;
-    height: 340px;
-}
-
 .container-main {
     @include format();
     flex-direction: column;
+    #mail {
+        font-size: 4vw;
+        margin: 12px;
+        font-family: Roboto-Bold;
+    }
 }
 
-#mail {
-    font-size: 4vw;
-    margin: 12px;
-    font-family: Roboto-Bold;
-}
+
 
 .contactForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
-    /* margin: 3%; */
+    // margin: 0.5%;
+    #form {
+        flex: 15%;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex: 1;
+            width: 96%;
+        }
+        width: 90%;
+        font-family: Roboto-Black;
+        align-self: center;
+        margin: 1%;
+        padding: 1%;
+    }
+    #formMsg {
+        width: 94%;
+        font-family: Roboto-Black;
+        align-self: center;
+        margin: 1%;
+        padding: 1%;
+    }
+    .submit {
+        align-self: flex-start;
+        background-color: rgb(255, 152, 1);
+        border: none;
+        padding: 1% 3% 1% 3%;
+        font-size: $smallFontSize;
+        margin: 1% 2% 2% 2%;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
 }
 
-#form {
-    flex: 15%;
-    width: 90%;
-    font-family: Roboto-Black;
-    align-self: center;
-}
-
-.submit {
-    align-self: flex-start;
-    background-color: rgb(255, 152, 1);
-    border: none;
-    text-decoration: none;
-    padding: 1% 3% 1% 3%;
-    font-size: 2vw;
-    margin: 4%;
-}
-
-button a {
-    text-decoration: none;
-    color: white;
-}
 
 footer {
     @include format();
@@ -349,31 +412,23 @@ footer {
     flex-wrap: nowrap;
     background-color: rgb(33, 33, 33);
     color: white;
-    font-size: 2vw;
+    font-size: $smallFontSize;
+    div {
+        padding: 3%;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
 }
-
-#form {
-    margin: 1%;
-    padding: 1%;
-}
-
-footer div {
-    padding: 3%;
-}
-
 
 .copyright {
     @include format();
     background-color: rgb(33, 33, 33);
     color: white;
+    span {
+        margin: 3%;
+        font-size: $smallFontSize;
+    }
 }
 
-.copyright span {
-    margin: 3%;
-    font-size: 2vw;
-}
-
-footer div a {
-    text-decoration: none;
-    color: white;
-}
