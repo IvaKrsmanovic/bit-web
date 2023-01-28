@@ -1,0 +1,21 @@
+.field {
+    position: absolute;
+    height: 500px;
+    width: auto;
+  }
+  .field img {
+    height: 100%;
+    width: 100%;
+  }
+  .player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    transform:translate3d(-50%,-50%,0);
+    transition:transform 0.2s cubic-bezier(.02,1.23,.79,1.08);
+  }
+  .player img {
+    height: 100%;
+    width: 100%;
+  }

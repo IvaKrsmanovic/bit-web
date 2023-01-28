@@ -1,0 +1,178 @@
+@import '_contact';
+@import '_global';
+@import '_masthead';
+@import '_mixins';
+@import '_navbar';
+@import '_portfolio';
+@import '_variables';
+
+@media (min-width: 576px) {}
+
+.p-4 {
+    background-color: $blueish;
+}
+
+nav {
+    background-color: $blueish;
+    margin: none;
+    .navbar-toggler {
+        background-color: $greenish;
+        padding: 10px;
+    }    
+    .navbar-toggler:focus{
+        background-color: $blueish;
+        border-color: white;
+
+    }
+    i {
+        color: white;
+        margin-left: 10px;
+    }
+}
+
+
+#profile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3rem;
+    height: 50%;
+    width: auto;
+}
+
+.image {
+    margin-top: 3%;
+    display: flex;
+
+}
+
+.border-underline-white {
+    .line {
+        display: inline-block;
+        height: 10%;
+        width: 15%;
+        border-top: 2px solid white;
+    }
+
+    .star {
+        display: inline-block;
+        margin: 0px 2px;
+        position: relative;
+        top: 18%;
+    }
+}
+
+.border-underline-black {
+    .line {
+        display: inline-block;
+        height: 10%;
+        width: 15%;
+        border-top: 2px solid black;
+    }
+
+    .star {
+        display: inline-block;
+        margin: 0px 2px;
+        position: relative;
+        top: 18%;
+    }
+}
+
+.container-1 {
+    background-color: $greenish;
+    margin-top: none;
+}
+
+.container-fluid {
+    overflow: hidden;
+}
+
+#portfolio {
+    padding: 3%;
+}
+
+.text-about {
+    color: white;
+    text-align: start;
+    font-size: 1.5vw;
+    margin-top: 3%;
+}
+
+button {
+    margin: 3%;
+
+    span {
+        color: white;
+        font-size: 3vw;
+    }
+}
+
+form {
+    label {
+        float: left;
+        margin-bottom: 2%;
+        color: #858e95;
+        font-weight: 600;
+    }
+
+    #first-label {
+        margin-top: 3%;
+    }
+
+    .form-input {
+        width: 100%;
+        margin-bottom: 3%;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 0.5px solid #858e95;
+    }
+
+    button {
+        float: left;
+        border: none;
+        margin: none;
+        margin-left: -1%;
+        margin-top: -2%;
+        border-radius: 15%;
+        padding: 2%;
+        font-size: 1,5vw;
+        color: white;
+        font-weight: 600;
+        background-color: $greenish;
+    }
+}
+
+#container-blue {
+    margin-top: 5%;
+    background-color: $blueish;
+    color: white;
+
+    #title {
+        margin: 4%;
+        font-size: 1.5vw;
+        font-weight: 700;
+    }
+
+    #added-text {
+        font-size: 1vw;
+    }
+
+    #copyright {
+        margin-top: 5%;
+        font-size: 1vw;
+        color: white;
+    }
+
+    #copyright-small {
+        font-size: 0.75vw;
+        color: #858e95;
+    }
+}
+
+.text-about {
+    .row {
+        .col {
+            margin-bottom: 5%;
+        }
+    }
+}

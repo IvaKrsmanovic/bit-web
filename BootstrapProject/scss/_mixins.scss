@@ -1,0 +1,38 @@
+@mixin fontColor() {
+    @for $i from 1 through 5 {
+
+        @if ($i % 2 == 0) {
+
+            #title-#{$i} {
+                color: black;
+                font-size: 3vw;
+                font-weight: bolder;
+            }
+
+            #subtitle-#{$i} {
+                color: black;
+                font-size: 2vw;
+                margin: 3%;
+                font-weight: bold;
+            }
+
+        } @else {
+
+            #title-#{$i} {
+                color: white;
+                font-size: 3vw;
+                font-weight: bolder;
+            }
+
+            #subtitle-#{$i} {
+                color: white;
+                font-size: 2vw;
+                margin: 3%;
+                font-weight: bold;
+            }
+        }
+        
+    }
+}
+
+@include fontColor();
